@@ -4,6 +4,10 @@ import React from 'react';
 export default function HomePage() {
   const router = useRouter();
   const { name } = router.query;
+  const navigateToPortfolio = () => {
+    router.push('/tanaken/portfolio')
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow">
@@ -56,18 +60,18 @@ export default function HomePage() {
         <section id="services" className="py-16">
           <h3 className="text-2xl font-bold text-gray-800 mb-6">Our Services</h3>
           <ul className="space-y-4">
-            <li className="bg-white shadow p-6 rounded-lg">
+            <button onClick = {navigateToPortfolio} className="w-full bg-white shadow p-6 rounded-lg text-left">
               <h4 className="font-semibold text-gray-800">ポートフォリオ</h4>
               <p className="text-gray-600">私が作ったwebアプリたち.</p>
-            </li>
-            <li className="bg-white shadow p-6 rounded-lg">
+            </button>
+            <button className="w-full bg-white shadow p-6 rounded-lg text-left">
               <h4 className="font-semibold text-gray-800">comming soon</h4>
               <p className="text-gray-600">comming soon.</p>
-            </li>
-            <li className="bg-white shadow p-6 rounded-lg">
+            </button>
+            <button className="w-full bg-white shadow p-6 rounded-lg text-left">
               <h4 className="font-semibold text-gray-800">comming soon</h4>
               <p className="text-gray-600">comming soon.</p>
-            </li>
+            </button>
           </ul>
         </section>
 
